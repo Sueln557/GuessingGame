@@ -1,0 +1,51 @@
+<!--SueN-Contacts-->
+<!--Dev 109-->
+<!--7/28/24-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Sue Ng">
+    <title>SueN-Contacts</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <p id="contacts"></p>
+    <div id="peopleList"></div>
+    <script>
+
+        //PeopleList
+        let peopleListDiv = document.getElementById('peopleList');
+        let tableHTML = '<table>';
+        tableHTML += '<tr><th>Slot Number</th><th>Name</th></tr>';
+        people.forEach(person => {
+            tableHTML += `<tr><td>${person.slot}</td><td>${person.name}</td></tr>`;
+        });
+        tableHTML += '</table>';
+
+        //call Javascript PeopleList to HTML
+        let show_entire_list = entire_list;
+        document.getElementById('contacts').innnerHTML = show_entire_list;
+
+        //Logic to show PeopleList or not
+        if (show_entire_list === 'y') {
+            peopleListDiv.innerHTML = tableHTML;
+        }
+
+        // Display HTML
+        document.writeln("Please provide a Slot Number associated with a Name.<br>");
+        let input = "Slot Number: " + slot_number + "<br>Name: " + name + "<br>";
+        document.getElementById('contacts').innnerHTML = input;
+        document.writeln(input);
+
+        let result = msg;
+        document.getElementById('contacts').innnerHTML = result;
+        document.writeln(result);
+    </script>
+</body>
+
+</html>
